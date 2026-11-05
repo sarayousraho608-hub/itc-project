@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: #0d0404;
+  color: #f8fafc;
+  direction: rtl;
+}
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/* النافبار */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #160707;
+  border-bottom: 1px solid #3f1515;
+}
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ef4444;
+}
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+.nav-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #ef4444;
+}
+/* قسم الـ Hero */
+.hero-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1f0808 0%, #0d0404 100%);
+}
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  color: #c59b9b;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-btn {
+  background-color: #ef4444;
+  color: #ffffff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.cta-btn:hover {
+  background-color: #dc2626;
+  transform: scale(1.05);
+}
+/* قسم الأنشطة */
+.activities-section {
+  padding: 60px 20px;
+  background-color: #160707;
+  text-align: center;
+  border-top: 1px solid #3f1515;
+}
+.activities-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #f8fafc;
+}
+.cards-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.card {
+  background-color: #0d0404;
+  border: 1px solid #3f1515;
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: right;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #ef4444;
+}
+.card h3 {
+  color: #ef4444;
+  margin-bottom: 15px;
+}
+.card p {
+  color: #c59b9b;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+/* فقاعة الشات العائمة */
+.chat-bubble-container {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  z-index: 1000;
+}
+.chat-bubble-btn {
+  background-color: #ef4444;
+  color: #ffffff;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chat-bubble-btn:hover {
+  transform: scale(1.1);
+}
+/* نافذة الشات المنبثقة */
+.chat-window {
+  width: 350px;
+  height: 480px;
+  background-color: #160707;
+  border: 1px solid #3f1515;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.chat-header {
+  background-color: #0d0404;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #3f1515;
+  font-weight: bold;
+  color: #ef4444;
+}
+.close-btn {
+  background: none;
+  border: none;
+  color: #c59b9b;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: #fff;
+}
+.chat-body {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #0d0404;
+}
+.message {
+  display: flex;
+}
+.message.user {
+  justify-content: flex-start;
+}
+.message.ai {
+  justify-content: flex-end;
+}
+.msg-bubble {
+  padding: 10px 14px;
+  border-radius: 12px;
+  max-width: 80%;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.message.user .msg-bubble {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+.message.ai .msg-bubble {
+  background-color: #260c0c;
+  color: #f8fafc;
+}
+.chat-footer {
+  display: flex;
+  padding: 10px;
+  background-color: #160707;
+  border-top: 1px solid #3f1515;
+  gap: 8px;
+}
+.chat-footer input {
+  flex: 1;
+  background-color: #0d0404;
+  border: 1px solid #3f1515;
+  padding: 10px;
+  border-radius: 8px;
+  color: #fff;
+  outline: none;
+}
+.chat-footer input:focus {
+  border-color: #ef4444;
+}
+.chat-footer button {
+  background-color: #ef4444;
+  color: #ffffff;
+  border: none;
+  padding: 0 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.chat-footer button:hover {
+  background-color: #dc2626;
+}
